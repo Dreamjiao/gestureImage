@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmi-Z3-S10"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Vh-RB-TH1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg" translatesAutoresizingMaskIntoConstraints="NO" id="hfq-kx-gV6" customClass="GestureImageView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="S5d-It-rrH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-Hm-PjX">
+                                <rect key="frame" x="156.5" y="570" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="HvH-Xw-9hQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="cvr-t8-He9"/>
+                                </constraints>
+                                <state key="normal" title="反转镜像"/>
+                                <connections>
+                                    <action selector="transAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NT6-rh-qZH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hfq-kx-gV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1fL-Ik-ALx"/>
+                            <constraint firstAttribute="trailing" secondItem="hfq-kx-gV6" secondAttribute="trailing" id="Ryh-43-yLp"/>
+                            <constraint firstItem="hfq-kx-gV6" firstAttribute="top" secondItem="tmi-Z3-S10" secondAttribute="bottom" id="S7r-ij-jve"/>
+                            <constraint firstItem="tpM-Hm-PjX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U8U-yt-LEN"/>
+                            <constraint firstItem="tpM-Hm-PjX" firstAttribute="top" secondItem="hfq-kx-gV6" secondAttribute="bottom" constant="50" id="dJC-is-1fk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_imageview" destination="hfq-kx-gV6" id="IaH-mT-4c8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="timg" width="333" height="500"/>
+    </resources>
+</document>
